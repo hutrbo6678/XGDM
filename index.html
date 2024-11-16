@@ -131,13 +131,60 @@
 	</section>
 	<!-- 跳转到其他网站的按钮 -->
 	<button onclick="window.open('https://www.ffddyy.com/frim/list3.html')">跳转到其他动漫资源网站</button>
+	<!-- 留言 -->
+    <style>
+        .comments-list {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+<body>
+
+<form id="commentForm">
+    <textarea id="commentText" name="comment" placeholder="添加新功能留言区"></textarea><br>
+    <button type="submit">提交留言</button>
+</form>
+
+<button id="toggleComments">展开/折叠评论</button>
+<div id="commentsList" class="comments-list">
+    <!-- 动态添加留言内容 -->
+</div>
+
+<script>
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var commentText = document.getElementById('commentText').value;
+        
+        if (commentText.trim() !== "") {
+            var commentsList = document.getElementById('commentsList');
+            var newComment = `<details>
+                                <summary>新留言</summary>
+                                ${commentText}
+                              </details>`;
+            commentsList.innerHTML += newComment;
+            document.getElementById('commentText').value = '';
+        }
+    });
+
+    document.getElementById('toggleComments').addEventListener('click', function() {
+        var commentsList = document.getElementById('commentsList');
+        if (commentsList.style.maxHeight) {
+            commentsList.style.maxHeight = null;
+        } else {
+            commentsList.style.maxHeight = commentsList.scrollHeight + "px";
+        }
+    });
+</script>
+</body>
+	
     <!-- 主要内容区域 -->
     <main>
         <!-- 动漫展示部分 -->
         <section class="anime - showcase">
             <article>
                 <img src="作业网站/魔女之旅.jpg" alt="动漫1图片">
-                <h2>魔女之旅</h2>
+                <h2>魔女之旅</h2><a href="https://www.ffddyy.com/vod/56214.html">观看动漫</a>
 				<!-- 跳转到其他网站的按钮 -->
 				<button onclick="window.open('https://item.taobao.com/item.htm?abbucket=14&id=804966902514&ns=1&priceTId=214780a417311695470305783e2297&spm=a21n57.sem.item.8.1ab639036y75dK&utparam=%7B%22aplus_abtest%22%3A%226245ad38381d53528d1da21b92267fb8%22%7D&skuId=5478436589144')">跳转到指定手办区</button>
             </article>
@@ -146,7 +193,7 @@
 		<section class="anime - showcase">
             <article>
                 <img src="作业网站/中二病也要谈恋爱封面.jpg" alt="动漫2图片">
-                <h2>中二病也要谈恋爱</h2>
+                <h2>中二病也要谈恋爱</h2><a href="https://www.ffddyy.com/vod/121599.html">观看动漫</a>
 				<!-- 跳转到其他网站的按钮 -->
 				<button onclick="window.open('https://detail.tmall.com/item.htm?id=643080899107&priceTId=214780a417311696950715875e2297&spm=a21n57.sem.item.47.1ab639036y75dK&utparam=%7B%22aplus_abtest%22%3A%22f0938a0a3551515d0327515557b29315%22%7D&xxc=ad_ztc&skuId=4623176101250')">跳转到指定手办区</button>
             </article>
@@ -155,7 +202,7 @@
 		<section class="anime - showcase">
             <article>
                 <img src="作业网站/紫罗兰.jpg" alt="动漫3图片">
-                <h2>紫罗兰永恒花园</h2>
+                <h2>紫罗兰永恒花园</h2><a href="https://www.ffddyy.com/vod/56017.html">观看动漫</a>
 				<!-- 跳转到其他网站的按钮 -->
 				<button onclick="window.open('https://item.taobao.com/item.htm?id=826844940998&priceTId=214780a417311697745511990e2297&spm=a21n57.sem.item.91.1ab639036y75dK&utparam=%7B%22aplus_abtest%22%3A%224f42950455e01880ad444f4beb21cb61%22%7D&xxc=ad_ztc&skuId=5548763548050')">跳转到指定手办区</button>
             </article>
@@ -233,7 +280,7 @@
 	    <section class="anime - showcase">
 	        <article>
 	            <img src="作业网站/无职转生.jpg" alt="动漫1图片">
-	            <h2>无职转生</h2>
+	            <h2>无职转生</h2><a href="https://www.ffddyy.com/vod/116761.html">观看动漫</a>
 				<!-- 跳转到其他网站的按钮 -->
 				<button onclick="window.open('https://item.taobao.com/item.htm?id=824969030859&priceTId=214780a417311698345335461e2297&spm=a21n57.sem.item.136.1ab639036y75dK&utparam=%7B%22aplus_abtest%22%3A%22d756f88128e9874e073cc8a9454aa5e1%22%7D&xxc=ad_ztc')">跳转到指定手办区</button>
 	        </article>
@@ -242,7 +289,7 @@
 		<section class="anime - showcase">
 	        <article>
 	            <img src="作业网站/狐妖小红娘(1).jpg" alt="动漫2图片">
-	            <h2>狐妖小红娘</h2>
+	            <h2>狐妖小红娘</h2><a href="https://www.ffddyy.com/vod/32795.html">观看动漫</a>
 				<!-- 跳转到其他网站的按钮 -->
 				<button onclick="window.open('https://item.taobao.com/item.htm?id=810168629225&priceTId=214780a417311698821617945e2297&spm=a21n57.sem.item.181.1ab639036y75dK&utparam=%7B%22aplus_abtest%22%3A%22ce76ff55027f050cda21552c9f5a12fd%22%7D&xxc=ad_ztc&skuId=5670718019127')">跳转到指定手办区</button>
 	        </article>
@@ -251,7 +298,7 @@
 		<section class="anime - showcase">
 	        <article>
 	            <img src="作业网站/葬送的芙莉莲(1).jpg" alt="动漫3图片">
-	            <h2>葬送的芙莉莲</h2>
+	            <h2>葬送的芙莉莲</h2><a href="https:https://www.ffddyy.com/vod/117930.html">观看动漫</a>
 				<!-- 跳转到其他网站的按钮 -->
 				<button onclick="window.open('https://item.taobao.com/item.htm?id=826844940998&priceTId=214780a417311699346152240e2297&spm=a21n57.sem.item.226.1ab639036y75dK&utparam=%7B%22aplus_abtest%22%3A%2240a58c9318990d6045b0a37e9694d27f%22%7D&xxc=ad_ztc&skuId=5548763548050')">跳转到指定手办区</button>
 	        </article>
@@ -260,6 +307,6 @@
 	<p>本网站只展现部分动漫，需更多动漫点击上方（跳转到其他动漫网站）按钮</p>
 	<!-- 页脚区域 -->
 	<footer>
-	    <p>&copy; 2024动漫文化宣传网站版权所有</p>
+	    <p>&copy; 2024星光动漫文化宣传网站版权所有</p>
 	</footer>
 </html>
